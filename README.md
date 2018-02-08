@@ -2,6 +2,8 @@
 Unix like command line interpreter implemented in c
 
 ------------------------------------ABOUT PROGRAM------------------------------
+
+
 This program simulates working of command line interface in Unix environment
 
 Functions implemented :	1. ls, clear ,vi etc - All external commands 
@@ -21,6 +23,8 @@ Functions implemented :	1. ls, clear ,vi etc - All external commands
 			15. Handle Interrupt Signal: On pressing "Ctrl+C", the command that is running currently hould be terminated, your program should not terminate.
 
 ----COMMAND---------------------DESCRIPTION-----------------------------------------------
+
+
 cd <directory_name>		Changes current directory if user has appropriate permissions
 ls         			Lists information about files I the current directory
 rm         			Deletes indicated files. Supports options –r, -f, -v
@@ -32,6 +36,8 @@ rmexcept <list of files>	Removes all files except those in <list_of_files> from 
 <program_name> m		Creates a child process to execute program_name, but aborts the process if it does not complete its operation in m seconds
 
 ---------------------------------CODE OVERVIEW---------------------------------------
+
+
 The shell.c contains the main function which takes the input from user and checks it for pipeline. If pipeline exist it processes the data separately else it passes the data to the functions. 
 
 int with_pipe_execute():
@@ -76,6 +82,7 @@ It just checks the nth command from history_data array and passes the arguments 
 Also every argument given by user is stored in history.txt and history_data array
 
 ------------MAKEFILE---------------
+
 To directly compile and run program makefile has been provided. Open terminal in the directory having shell.c and makefile and type : 
 $make
  
